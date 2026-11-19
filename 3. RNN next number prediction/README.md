@@ -146,4 +146,54 @@ new_input = np.array(
 
 prediction = model.predict(new_input, verbose=0)
 
-print("Pred
+print("Predicted next number:", prediction[0][0])
+```
+
+The model receives `[5, 6, 7]` and attempts to predict the next number, which is `8`.
+
+The prediction is a learned numerical estimate, so it may not be exactly 8.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- NumPy
+- TensorFlow
+- Keras
+- SimpleRNN
+- Jupyter Notebook / Python
+
+---
+
+## 🚀 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Harishbroo/DL_PROJECTS.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd DL_PROJECTS/"3. RNN next number prediction"
+```
+
+### 3. Install dependencies
+
+```bash
+pip install numpy tensorflow
+```
+
+### 4. Run the script
+
+```bash
+python rnn_next_number.py
+```
+
+---
+
+## 👨‍💻 Author
+
+**Harish Parajuli**
