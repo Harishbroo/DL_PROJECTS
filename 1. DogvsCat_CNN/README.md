@@ -1,12 +1,41 @@
-# Dog vs Cat Classification using CNN
+# 🐶 Dog vs Cat Classification using CNN
 
-## Project Overview
+## 📖 Overview
+
 This project uses a **Convolutional Neural Network (CNN)** to classify images into two categories: **Dog** and **Cat**.
 
-The model is trained to learn visual features from images and predict whether an uploaded image contains a dog or a cat.
+The model learns visual patterns and features from images to distinguish between dogs and cats. A **Streamlit** web application allows users to upload an image and receive a prediction.
 
-## Model Architecture
-The CNN includes:
+---
+
+## 📁 Project Files
+
+- `DogvsCat.ipynb` – Data preprocessing, CNN model building, training, and evaluation
+- `app.py` – Streamlit web application for image classification
+- `requirements.txt` – Python dependencies
+- `Dockerfile` – Docker configuration
+- `dog_cat_model.keras` – Trained CNN model (not included in this repository because it exceeds GitHub's 100 MB individual file limit)
+
+---
+
+## ⚙️ Workflow
+
+- Dataset loading and preparation
+- Image preprocessing and resizing
+- Pixel normalization
+- Building the CNN architecture
+- Model training
+- Model evaluation
+- Saving the trained model
+- Loading the model into a Streamlit application
+- Predicting whether an uploaded image contains a dog or a cat
+
+---
+
+## 🧠 Model Architecture
+
+The CNN architecture consists of:
+
 - Convolutional layers with 32, 64, and 128 filters
 - Batch Normalization
 - Max Pooling layers
@@ -14,27 +43,21 @@ The CNN includes:
 - Dropout for regularization
 - Sigmoid output layer for binary classification
 
-## Technologies Used
+---
+
+## 🛠️ Technologies Used
+
 - Python
 - TensorFlow / Keras
 - OpenCV
 - NumPy
 - Streamlit
 - Jupyter Notebook
+- Docker
 
-## Project Structure
+---
 
-```text
-1. DogvsCat_CNN/
-│
-├── DogvsCat.ipynb       # Model training and experiments
-├── app.py               # Streamlit web application
-├── requirements.txt     # Project dependencies
-├── Dockerfile           # Docker configuration
-└── dog_cat_model.keras  # Trained CNN model (not included in GitHub)
-```
-
-## How to Run
+## 🚀 Run Locally
 
 ### 1. Clone the repository
 
@@ -56,9 +79,9 @@ pip install -r requirements.txt
 
 ### 4. Add the trained model
 
-Place `dog_cat_model.keras` inside this folder.
+Place the trained `dog_cat_model.keras` file inside this folder.
 
-**Note:** The trained model is not included in this GitHub repository because it exceeds GitHub's 100 MB individual file limit.
+**Note:** The model file is excluded from GitHub because it is larger than 100 MB. It must be available locally before running the application.
 
 ### 5. Run the application
 
@@ -66,9 +89,26 @@ Place `dog_cat_model.keras` inside this folder.
 streamlit run app.py
 ```
 
-## What I Learned
-- Building a CNN for image classification
-- Understanding convolution and pooling layers
-- Training and saving deep learning models
-- Using OpenCV for image processing
-- Deploying a deep learning model with Streamlit
+---
+
+## 🐳 Docker
+
+The project includes a Dockerfile for containerization.
+
+Build the Docker image:
+
+```bash
+docker build -t dog-cat-cnn .
+```
+
+Run the Docker container:
+
+```bash
+docker run -p 8501:8501 dog-cat-cnn
+```
+
+---
+
+## 👨‍💻 Author
+
+**Harish Parajuli**
