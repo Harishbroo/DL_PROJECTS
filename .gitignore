@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.vscode/
+.env
+.env.*
+kaggle.json
+.kaggle/
+.ipynb_checkpoints/
+1. DogvsCat_CNN/dog_cat_model.keras
+~$*
+2. DogVsCatTL/jj.docx
